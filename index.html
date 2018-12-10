@@ -1,24 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Data Visualisations</title>
-    <script src="https://unpkg.com/d3@5.6.0/dist/d3.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-	<link rel='stylesheet' href='https://cdn.rawgit.com/novus/nvd3/v1.8.1/build/nv.d3.css'>
-</head>
 <html>
-  <body>
-	<h1> Διάφορα data visualisations</h1>
-	<p><br><br></p>
-	<p><br><br></p>
-	<h2>Θάνατοι από καρκίνο σε ευρωπαϊκές χώρες (% ποσοστό των συνολικών θανάτων)</h2>
-	<p><br><br></p>
-    <script src="script1_3.js"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js'></script>
-    <script src='https://cdn.rawgit.com/novus/nvd3/v1.8.1/build/nv.d3.min.js'></script>
-	<p><br><br></p>
-	
-  </body>
-</html>
+<body>
+
+var chart = c3.generate({
+  data: {
+    groups: [['upload', 'download']],
+    type: "bar",
+    json: [
+      { name: "www.site1.com", upload: 200, download: 200, total: 400 },
+      { name: "www.site2.com", upload: 100, download: 300, total: 400 },
+      { name: "www.site3.com", upload: 300, download: 200, total: 500 },
+      { name: "www.site4.com", upload: 400, download: 100, total: 500 }
+    ],
+    keys: {
+      x: "name", // it's possible to specify 'x' when category axis
+      value: ["upload", "download"]
+    }
+  },
+  axis: {
+    x: {
+      type: "category"
+    }
+  }
+});
+
+
+</body>
+</html> 
